@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import com.lkt.pview.progerssveiw.R;
 import com.lkt.pview.progerssveiw.bean.PointBean;
-import com.lkt.pview.progerssveiw.view.TimeLineView;
+import com.lkt.pview.progerssveiw.view.ProgressView;
 import com.lkt.pview.progerssveiw.viewinterface.IOnPointClick;
 
 import java.text.SimpleDateFormat;
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     List<PointBean> datas = new ArrayList<>();
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     private int random = 12;
-    private TimeLineView timeLineView;
+    private ProgressView progressView;
     private Random myRandom = new Random();
     private TextView textView;
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        timeLineView = findViewById(R.id.timeLineView);
+        progressView = findViewById(R.id.timeLineView);
         textView = findViewById(R.id.textView);
         findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         init(random);
-        timeLineView.setiOnPointClick(new IOnPointClick() {
+        progressView.setiOnPointClick(new IOnPointClick() {
             @Override
             public void onPointClick(int position) {
                 PointBean pointBean = datas.get(position);
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             pointBean.setUser("用户" + i);
             datas.add(pointBean);
         }
-        timeLineView.setData(datas);
+        progressView.setData(datas);
         textView.setText("数量" + datas.size());
     }
 }

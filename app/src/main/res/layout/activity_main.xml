@@ -17,7 +17,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <com.lkt.pview.progerssveiw.view.TimeLineView
+                <com.lkt.pview.progerssveiw.view.ProgressView
                     android:id="@+id/timeLineView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />

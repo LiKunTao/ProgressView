@@ -20,7 +20,7 @@ import com.lkt.pview.progerssveiw.viewinterface.IOnPointClick;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TimeLineView extends View {
+public class ProgressView extends View {
 
     private List<PointBean> datas;//要显示的数据源
     private int width;
@@ -36,17 +36,17 @@ public class TimeLineView extends View {
     private int hight;
 
 
-    public TimeLineView(Context context) {
+    public ProgressView(Context context) {
         super(context);
         initView(context, null);
     }
 
-    public TimeLineView(Context context, @Nullable AttributeSet attrs) {
+    public ProgressView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initView(context, attrs);
     }
 
-    public TimeLineView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ProgressView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView(context, attrs);
     }
