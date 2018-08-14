@@ -6,6 +6,16 @@ public class PointBean {
     private String action;
     private String date;
     private String user;
+    private String content;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
 
     public String getAction() {
         return action;
